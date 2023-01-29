@@ -17,9 +17,10 @@ def read_raw_amr_data(
     graphs = []
     for path_ in paths:
         for path in glob.glob(str(path_)):
-            path = Path(path)    
+            path = Path(path)
+            print(path)
             graphs.extend(pm_load(path, dereify=dereify, remove_wiki=remove_wiki))
-
+    print(graphs)
     assert graphs
     
     if use_recategorization:
