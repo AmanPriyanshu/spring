@@ -144,10 +144,12 @@ def instantiate_loader(
         dereify=True,
 ):
     paths = []
+    print(glob_pattn)
     if isinstance(glob_pattn, str) or isinstance(glob_pattn, Path):
         glob_pattn = [glob_pattn]
     for gpattn in glob_pattn:
         paths += [Path(p) for p in glob(gpattn)]
+    print(paths)
     if evaluation:
         assert out is not None
         Path(out).write_text(
