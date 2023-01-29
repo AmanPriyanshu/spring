@@ -18,8 +18,9 @@ def read_raw_amr_data(
     for path_ in paths:
         for path in glob.glob(str(path_)):
             path = Path(path)
-            print(path)
+            print("path", path)
             graphs.extend(pm_load(path, dereify=dereify, remove_wiki=remove_wiki))
+    print("Printing graphs")
     print(graphs)
     assert graphs
     
