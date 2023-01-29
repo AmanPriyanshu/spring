@@ -8,8 +8,8 @@ import torch
 from transformers import BartTokenizer
 
 from spring_amr import ROOT, postprocessing
-from spring_amr.linearization import AMRTokens, AMRLinearizer
-from spring_amr.penman import encode
+from .linearization import AMRTokens, AMRLinearizer
+from .penman import encode
 
 
 class AMRBartTokenizer(BartTokenizer):
