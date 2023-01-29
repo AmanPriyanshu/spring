@@ -7,7 +7,7 @@ import regex as re
 import torch
 from transformers import BartTokenizer
 
-from spring_amr import ROOT, postprocessing
+from . import ROOT, postprocessing
 from .linearization import AMRTokens, AMRLinearizer
 from .penman import encode
 
